@@ -1,2 +1,12 @@
 # Gesture_recognition
 Gesture Recognition for English Roman Alphabet
+The project enables recognition of gestures for ‘Alphabets’ of a language using suitable parameters and pattern matching techniques. In this project, recognition of English language Alphabets using motion sensor, Arduino UNO microcontroller and Dynamic Time Warping (DTW) has been realised. The DTW algorithm is used for making alphabet models for training and testing purposes. The user just needs to wear a gesture device (gesture glove) which includes a sensor. The sensor will record the movement of hand in a specific direction which will result in the movement of the robot in the respective direction. Hand gestures can be recognized in 2-D or 3-D space with different references. The system needs to be trained for a set of actions with respect to the references such as x-y-z axes or any other logical reference frame.
+
+For complex 3-D hand gesture in space MPU6050 (accelerometer+gyrometer) is used. Arduino UNO microprocessor is used to get analog values and generate output according to our requirements. The system is developed for recognizing five basic 2-D hand gestures (such as left, right, front, back and steady); complex 3-D gestures (such as yaw, pitch and roll); and the gesture for English Alphabets with the help of a suitable DTW algorithm (for training the Alphabet models and recognition of the test data).
+
+Input to the system: Input to the system is the gesture for an alphabet captured in non-image parametric form. 
+Output to the system: The output of the system is recognized alphabet for the input gesture. 
+
+ The input gesture is captured by the motion sensor (MPU 6050). This is an accelerometer and gyro meter. The MPU-6050 devices combine a 3-axis gyroscope and a 3-axis accelerometer on the same silicon die, together with an on-board Digital Motion Processor, which processes complex 6-axis Motion Fusion algorithms. The device can access external magnetometers or other sensors through an auxiliary master I²C bus, allowing the devices to gather a full set of sensor data without intervention from the system processor. The motion sensor is worn on the back of the palm. This sense the acceleration and de-acceleration produced while writing a letter. The gyro meter captures the rotation if the hand produced during writing a letter.
+
+The output of the sensor are six parameters viz acceleration values along x-y-z axes and rotation or gyro meter values along x-y-z axes. These recognized gesture vectors are sent to the microprocessor Arduino UNO.
